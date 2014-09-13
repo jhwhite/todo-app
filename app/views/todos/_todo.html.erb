@@ -1,9 +1,9 @@
 <div class="cards">
   <% @todos.each do |todo| %>
   <div class="card">
-    <div class="ribbon-wrapper"><div class="ribbon"><%= todo.due_at %></div></div>
+    <!--<div class="ribbon-wrapper"><div class="ribbon"><%= todo.due_at %></div></div>-->
     <div class="card-image">
-      <img src="https://raw.github.com/Magnus-G/Random/master/mountains.png" alt="">
+      <%= image_tag "todo.jpg" %>
     </div>
     <div class="card-header">
       <%= todo.title %>
@@ -13,9 +13,9 @@
     </div>
     <div class="card-stats">
       <ul>
-        <li>98<span>Items</span></li>
-        <li>298<span>Things</span></li>
-        <li>923<span>Objects</span></li>
+        <li>Created:<span><%= time_ago_in_words(todo.created_at) %> ago</span></li>
+        <li>Due:<span><%= time_ago_in_words(todo.due_at) %> from now</span></li>
+        <li>Complete:<span>Objects</span></li>
       </ul>
     </div>
   </div>
