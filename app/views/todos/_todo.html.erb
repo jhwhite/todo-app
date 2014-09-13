@@ -1,0 +1,23 @@
+<div class="cards">
+  <% @todos.each do |todo| %>
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon"><%= todo.due_at %></div></div>
+    <div class="card-image">
+      <img src="https://raw.github.com/Magnus-G/Random/master/mountains.png" alt="">
+    </div>
+    <div class="card-header">
+      <%= todo.title %>
+    </div>
+    <div class="card-copy">
+      <p><%= todo.description %></p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>98<span>Items</span></li>
+        <li>298<span>Things</span></li>
+        <li>923<span>Objects</span></li>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+</div>
