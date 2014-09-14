@@ -7,15 +7,20 @@
     </div>
     <div class="card-header">
       <%= todo.title %>
+
     </div>
     <div class="card-copy">
       <p><%= todo.description %></p>
+      <%= link_to 'Edit todo', edit_todo_path(:id=> todo.id), :class => 'button' %>
+      <%= link_to 'Delete', todo, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %>
     </div>
     <div class="card-stats">
       <ul>
         <li>Created:<span><%= time_ago_in_words(todo.created_at) %> ago</span></li>
         <li>Due:<span><%= time_ago_in_words(todo.due_at) %> from now</span></li>
-        <li>Complete:<span>Objects</span></li>
+        <li>Done:
+        </li>
+        <!--<li>Complete:<span>Objects</span></li>-->
       </ul>
     </div>
   </div>
