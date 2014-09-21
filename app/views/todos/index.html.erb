@@ -1,6 +1,25 @@
 <br />
 
 <div id="maincontent">
+  <div class="modal">
+  <label for="modal-1">
+    <div class="btn js-btn">New Todo</div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-window">
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1>New todo</h1><br /><br /><br />
+
+      <%= render 'form' %>
+
+      <%= link_to 'Back', todos_path %>
+<br />
+    </div>
+  </div>
+</div>
+
+
   <%= render 'todo' %>
 </div>
 

@@ -1,3 +1,6 @@
+
+
+
 <div class="cards">
   <% @todos.each do |todo| %>
   <div class="card">
@@ -7,8 +10,8 @@
     </div>
     <div class="card-header">
       <%= todo.title %>
-
     </div>
+
     <div class="card-copy">
       <p><%= todo.description %></p>
       <%= link_to 'Edit todo', edit_todo_path(:id=> todo.id), :class => 'button' %>
