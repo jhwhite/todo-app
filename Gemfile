@@ -9,7 +9,7 @@ group :development, :test do
 end
 
 group :production do
-  'pg'
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
