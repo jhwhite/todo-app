@@ -1,2 +1,9 @@
 language: ruby
 script: 'true'
+deploy:
+  provider: heroku
+  api_key:
+    secure: UIXcKtI1q1sVzOHLwwdAz2AYM2FkKFwFu8B5m1w1s1ZHIC/o9yli5XDrr80OYvxLIHF9WcniC1H6O3/wDb8TG+CpAJCrbkZy/NdgZVPmAb/vzKWOcVXPifFZTkodEv398Gap4apcQ+ZWIORYs1wwIwv9+Nf4FeNvXDHtWXMoT8w=
+  app: railsschool-todo-app
+  on:
+    repo: jhwhite/todo-app
